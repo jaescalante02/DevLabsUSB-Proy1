@@ -1,0 +1,13 @@
+from django.db import models
+#Aca se representan los modelos, el aspecto logico de nuestro sistema
+
+#Clase que representa a un usuario del sistema.
+#Puede ser un usuario administrador, o un cliente
+#de la empresa
+class Votacion(models.Model):
+  url = models.CharField(max_length=30, primary_key=True)
+  puntuacion = models.IntegerField(default=1)
+  
+  def __unicode__(self):
+      return self.url+' '+str(self.puntuacion)
+        
