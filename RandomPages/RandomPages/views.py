@@ -5,7 +5,7 @@ from django.template import Context
 from django.template.loader import get_template
 from django.shortcuts import render
 from django.utils import simplejson
-from models import Votacion
+from models import URL
 
 def quiz_guess(request, fact_id):   
    message = []
@@ -15,11 +15,11 @@ def quiz_guess(request, fact_id):
       if(int(fact_id)==2):
           message.append('T')#fact.type
           message.append('Viste clase con ella cierto?')
-	  v1 = Votacion(1,'http://www.paginadejuan.com',0)
-          Votacion.save(v1)
+	  #v1 = Votacion(1,'http://www.paginadejuan.com',0)
+          #Votacion.save(v1)
       else:
-          v1 = Votacion(4,'http://www.paginadePatrick.com',0)
-          Votacion.save(v1)
+          #v1 = Votacion(4,'http://www.paginadePatrick.com',0)
+          #Votacion.save(v1)
 
           message.append('F')#fact.type
           message.append('Es obvio que Marla es una perra!')
