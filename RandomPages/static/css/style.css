@@ -10,5 +10,27 @@
     font-family: Sans-serif;
     color: #ffffff;
     text-align: center;
-    width: 30%;
+}
+#random-page {
+    width: 100%;
+    overflow: hidden;
+    height: inherit;
+}
+#tb-stumble-frame {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+}
+.div{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    display: block;
+}
+body{
+    height:92%;
 }
