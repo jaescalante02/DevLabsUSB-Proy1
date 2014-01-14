@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+{%load staticfiles %}<!DOCTYPE html>
 <head>
     <title>Random Pages</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/style.css" %}{% endblock %}"/>
 </head>
 <body>
 <div id="toolbar">
