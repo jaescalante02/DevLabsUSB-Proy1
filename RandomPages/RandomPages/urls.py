@@ -8,6 +8,7 @@ import RandomPages.views as vista
 urlpatterns = patterns('',
     # Examples:
     url(r'^$',vista.home),
+    url(r'^test/(.+)/$', vista.quiz_guess, name='quiz_guess'),
     # url(r'^$', 'RandomPages.views.home', name='home'),
     # url(r'^RandomPages/', include('RandomPages.foo.urls')),
 
