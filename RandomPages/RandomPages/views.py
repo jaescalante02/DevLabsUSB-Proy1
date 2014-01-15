@@ -6,6 +6,8 @@ from django.template.loader import get_template
 from django.shortcuts import render
 from django.utils import simplejson
 from models import URL
+from django.db.models import Sum
+import random
 
 def quiz_guess(request, fact_id):   
    message = []
@@ -33,4 +35,32 @@ def quiz_guess(request, fact_id):
 def home(request):
   now= datetime.datetime.now()
   return render (request,'index.html',{'now':now})
+
+#Funcion para calcular la probabilidad
+def recta_prob():
+    res = URL.objects.all()
+    suma = res.aggregate(Sum('puntuacion'))['puntuacion__sum']
+    listaUrls = res.values_list()
+    
+    # Asignar a cada elemento su probabilidad
+    j = 0.0
+    recta = []
+    for i in listaUrls:
+        recta.append((i[0],j,j + i[1] / float(suma)))
+        j += i[1] / float(suma)
+        
+    return recta
+
+# Funcion que busca en la recta el elemento correspondiente
+def buscarEnRecta(recta,n):
+    for i in recta:
+        if i[1]<=n and n<=i[2]:
+            return i[0]
+
+# Funcion que obtiene una pagina aleatoria
+def obtenerPagAleatoria():
+    n = random.uniform(0.0,1.0)
+    recta = recta_prob()
+    url = buscarEnRecta(recta,n)
+    print url
 
