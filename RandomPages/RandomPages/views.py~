@@ -12,17 +12,10 @@ def quiz_guess(request, fact_id):
    if request.is_ajax():
       print 'AJAX'
       #fact = get_object_or_404(Fact, id=fact_id)
-      if(int(fact_id)==2):
-          message.append('T')#fact.type
-          message.append('Viste clase con ella cierto?')
-	  v1 = Votacion(1,'http://www.paginadejuan.com',0)
-          Votacion.save(v1)
-      else:
-          v1 = Votacion(4,'http://www.paginadePatrick.com',0)
-          Votacion.save(v1)
 
-          message.append('F')#fact.type
-          message.append('Es obvio que Marla es una perra!')
+
+      message.append('http://www.w3schools.com/jquery')#fact.type
+      #message.append('Es obvio que Marla es una perra!')
 
    else:
       message.append("You're the lying type, I can just tell.")

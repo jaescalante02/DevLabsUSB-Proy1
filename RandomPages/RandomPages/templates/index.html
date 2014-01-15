@@ -1,7 +1,11 @@
 {%load staticfiles %}<!DOCTYPE html>
 <head>
     <title>Random Pages</title>
-    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/style.css" %}{% endblock %}"/>
+            <link rel='stylesheet' href='{{STATIC_URL}}css/style.css'>
+    <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="{{STATIC_URL}}js/ajax.js">
+    </script>
 </head>
 <body>
 <div id="toolbar">
@@ -21,3 +25,4 @@
 </div>
 
 <body>
+
