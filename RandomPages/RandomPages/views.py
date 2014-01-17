@@ -26,9 +26,9 @@ def quiz_guess(request, fact_id):
 
    return HttpResponse(json, mimetype='application/json')
 
-def discover(request):
+# Funcion para obtener una pagina.
+def discover(request,arg2):
 
-    print 'DESCUBRIMIENTO'
     message = []
     if request.is_ajax():
         pagina = obtenerPagAleatoria()
@@ -38,6 +38,37 @@ def discover(request):
 
     json = simplejson.dumps(message)
     return HttpResponse(json, mimetype='application/json')
+
+
+# Funcion para aumentar la puntuacion de una pagina
+def like(request,urlPagina):
+
+   if request.is_ajax():
+       
+       pag = URL.objects.get(url=urlPagina)
+       pag.puntuacion += 1
+       pag.save()
+
+       return false
+   else:
+
+       return false
+
+
+# Funcion para disminuir la puntuacion de una pagina
+def dislike(request,urlPagina):
+
+   if request.is_ajax():
+       
+       pag = URL.objects.get(url=urlPagina)
+       if (pag.puntuacion > 1):
+           pag.puntuacion += -1
+       pag.save()
+
+       return false
+   else:
+
+       return false
 
 
 
