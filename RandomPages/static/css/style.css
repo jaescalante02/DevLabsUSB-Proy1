@@ -9,11 +9,14 @@
 #toolbar-title {
     font-family: Sans-serif;
     color: #ffffff;
-    text-align: center;
+    text-align: right;
     /*float: left;*/
 }
 #toolbar-buttons {
-    float: right;
+    /*float: right*/;
+    color: #ffffff;
+    text-align: center;
+    
 }
 #random-page {
     width: 100%;

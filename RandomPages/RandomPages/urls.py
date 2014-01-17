@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$',vista.home),
     url(r'^test/(.+)/$', vista.quiz_guess, name='quiz_guess'),
+    url(r'^discover/(.+)/$', vista.discover),
     url(r'^cover$', vista.cover),
     # url(r'^$', 'RandomPages.views.home', name='home'),
     # url(r'^RandomPages/', include('RandomPages.foo.urls')),

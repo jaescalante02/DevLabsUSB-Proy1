@@ -6,4 +6,12 @@ $.get("/test/"+this.id+"/", function(data) {
 
 });
 });
+
+$('#toolbar-buttons').click( function () {
+    $.get("/discover/"+this.id+"/", function(data) {
+
+          $("#tb-stumble-frame").attr("src",data[0]);
+
+    });
+});
 });

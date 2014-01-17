@@ -26,6 +26,21 @@ def quiz_guess(request, fact_id):
 
    return HttpResponse(json, mimetype='application/json')
 
+def discover(request):
+
+    print 'DESCUBRIMIENTO'
+    message = []
+    if request.is_ajax():
+        pagina = obtenerPagAleatoria()
+        message.append(pagina)
+    else:
+        message.append("http://www.ldc.usb.ve")
+
+    json = simplejson.dumps(message)
+    return HttpResponse(json, mimetype='application/json')
+
+
+
 #View que despliega la pagina de inicio del sistema
 def home(request):
   now= datetime.datetime.now()
