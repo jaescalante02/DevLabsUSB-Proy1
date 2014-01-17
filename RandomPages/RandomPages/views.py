@@ -33,7 +33,6 @@ def discover(request,arg2):
     if request.is_ajax():
         pagina = obtenerPagAleatoria()
         message.append(pagina)
-        print pagina
     else:
         message.append("http://www.ldc.usb.ve")
 
