@@ -15,3 +15,25 @@ $('#toolbar-buttons').click( function () {
     });
 });
 });
+
+$(document).ready(function() {
+$('#search-twitter').click( function () {
+$.get("/search/"+$("#search").val()+"/", function(data) {
+
+  //alert(data[0]);
+  $("#random-page").hide();
+  $('#tweet1').text(data[0]);
+  //$('#tweet1')[0].innerHTML=data[0];
+  $("#tweet1").attr("href",data[1]);
+
+});
+});
+
+$('#toolbar-buttons').click( function () {
+    $.get("/discover/"+this.id+"/", function(data) {
+
+          $("#tb-stumble-frame").attr("src",data[0]);
+
+    });
+});
+});

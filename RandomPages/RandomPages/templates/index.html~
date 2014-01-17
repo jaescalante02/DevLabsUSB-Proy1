@@ -9,20 +9,31 @@
 </head>
 <body>
 <div id="toolbar">
-
+    <!--
     <div id="toolbar-title">
-        Random Pages
+       <img id="logo" src='{{STATIC_URL}}img/image.png'/> 
     </div>
-    <div id="toolbar-buttons">
-        
-    </div>
+    -->
+	    <input type="text" id="search" value="holis">
+            <input type="submit" value="twitter" id="search-twitter">
+            <input type="submit" value="Discover" id="toolbar-buttons"> Discover </p>
 
 </div>
+<div id="tweet1" class="tweet" > hola1
+</div>
+
+<div id="tweet2" class="tweet" > hola1
+</div>
+
+<div id="tweet2" class="tweet" > hola1
+</div>
+
+
 <div id="random-page">
     <iframe id="tb-stumble-frame" border="0" frameborder="0" hspace="0" 
     vspace="0" marginheight="0" marginwidth="0" 
     src="http://www.usb.ve"></iframe>
 </div>
 
-</body>
+<body>
 
