@@ -8,13 +8,16 @@ from django.utils import simplejson
 from models import URL
 from django.db.models import Sum
 import random
+import busqueda
 
 def quiz_guess(request, fact_id):   
    message = []
    if request.is_ajax():
       print 'AJAX'
       #fact = get_object_or_404(Fact, id=fact_id)
-      message.append('http://www.w3schools.com/jquery')#fact.type
+      pagina = obtenerPagAleatoria()
+      tweets = busqueda.buscarTweets('w3schools')
+      message.append(tweets[1])#fact.type
       #message.append('Es obvio que Marla es una perra!')
 
    else:
@@ -54,5 +57,5 @@ def obtenerPagAleatoria():
     n = random.uniform(0.0,1.0)
     recta = recta_prob()
     url = buscarEnRecta(recta,n)
-    print url
+    return url
 
