@@ -10,6 +10,10 @@
     font-family: Sans-serif;
     color: #ffffff;
     text-align: center;
+    /*float: left;*/
+}
+#toolbar-buttons {
+    float: right;
 }
 #random-page {
     width: 100%;
@@ -33,4 +37,12 @@
 }
 body{
     height:92%;
+}
+
+#logo{
+    height: 35px;
+}
+
+#like{
+    height: 35px;
 }

@@ -31,6 +31,9 @@ def home(request):
   now= datetime.datetime.now()
   return render (request,'index.html',{'now':now})
 
+def cover(request):
+    return render (request, 'cover.html')
+
 #Funcion para calcular la probabilidad
 def recta_prob():
     res = URL.objects.all()
