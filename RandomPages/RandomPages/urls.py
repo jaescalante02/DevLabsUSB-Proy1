@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$',vista.home),
     url(r'^test/(.+)/$', vista.quiz_guess, name='quiz_guess'),
+    url(r'^search/(.+)/$', vista.devuelve_tweets, name='devuelve_tweets'),
     url(r'^discover/(.+)/$', vista.discover),
     url(r'^like/(.+)/$', vista.like),
     url(r'^dislike/(.+)/$', vista.dislike),

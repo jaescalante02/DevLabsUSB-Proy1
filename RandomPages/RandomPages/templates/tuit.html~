@@ -1,0 +1,27 @@
+<head>
+    <title>Welcome to Random Pages!</title>
+            <link rel='stylesheet' href='{{STATIC_URL}}css/cover.css'>
+    <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="{{STATIC_URL}}js/ajax.js">
+    </script>
+</head>
+
+<body>
+<p "id=tweet1" class="tweet" >
+</p>
+
+<p "id=tweet2" class="tweet">
+</p>
+
+<p "id=tweet3" class="tweet">
+</p>
+
+<p "id=tweet4" class="tweet">
+</p>
+
+<p "id=tweet5" class="tweet">
+</p>
+
+
+</body>

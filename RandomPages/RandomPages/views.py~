@@ -6,24 +6,91 @@ from django.template.loader import get_template
 from django.shortcuts import render
 from django.utils import simplejson
 from models import URL
+from django.db.models import Sum
+import random
+import busqueda
 
 def quiz_guess(request, fact_id):   
    message = []
    if request.is_ajax():
       print 'AJAX'
       #fact = get_object_or_404(Fact, id=fact_id)
-
-
-      message.append('http://www.w3schools.com/jquery')#fact.type
+      pagina = obtenerPagAleatoria()
+      tweets = busqueda.buscarTweets('w3schools')
+      message.append(tweets[1])#fact.type
       #message.append('Es obvio que Marla es una perra!')
 
    else:
       message.append("You're the lying type, I can just tell.")
    json = simplejson.dumps(message)
+
    return HttpResponse(json, mimetype='application/json')
+
+def discover(request):
+
+    print 'DESCUBRIMIENTO'
+    message = []
+    if request.is_ajax():
+        pagina = obtenerPagAleatoria()
+        message.append(pagina)
+    else:
+        message.append("http://www.ldc.usb.ve")
+
+    json = simplejson.dumps(message)
+    return HttpResponse(json, mimetype='application/json')
+
+
 
 #View que despliega la pagina de inicio del sistema
 def home(request):
   now= datetime.datetime.now()
   return render (request,'index.html',{'now':now})
+
+def cover(request):
+    return render (request, 'cover.html')
+
+#Funcion para calcular la probabilidad
+def recta_prob():
+    res = URL.objects.all()
+    suma = res.aggregate(Sum('puntuacion'))['puntuacion__sum']
+    listaUrls = res.values_list()
+    
+    # Asignar a cada elemento su probabilidad
+    j = 0.0
+    recta = []
+    for i in listaUrls:
+        recta.append((i[0],j,j + i[1] / float(suma)))
+        j += i[1] / float(suma)
+        
+    return recta
+
+# Funcion que busca en la recta el elemento correspondiente
+def buscarEnRecta(recta,n):
+    for i in recta:
+        if i[1]<=n and n<=i[2]:
+            return i[0]
+
+# Funcion que obtiene una pagina aleatoria
+def obtenerPagAleatoria():
+    n = random.uniform(0.0,1.0)
+    recta = recta_prob()
+    url = buscarEnRecta(recta,n)
+    return url
+
+def devuelve_tweets(request,search):
+
+   if request.is_ajax():
+      print 'AJAX'
+      #fact = get_object_or_404(Fact, id=fact_id)
+      pagina = obtenerPagAleatoria()
+      tweets = busqueda.buscarTweets(search)
+      #message.append(tweets[1])#fact.type
+      #message.append('Es obvio que Marla es una perra!')
+
+   else:
+      message.append("You're the lying type, I can just tell.")
+   json = simplejson.dumps(tweets)
+
+   return HttpResponse(json, mimetype='application/json')
+
 
