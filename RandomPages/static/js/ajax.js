@@ -16,17 +16,17 @@ $(document).ready(function() {
         });
     });
 
-    $('#toolbar-like').click( function () {
+    /*$('#toolbar-like').click( function () {
        
-        $.get("/like/"+this.id+"/"
+        $.get("/like/"+this.id+"/");
         
     });
 
     $('#toolbar-dislike').click( function () {
        
-        $.get("/dislike/"+this.id+"/
+        $.get("/dislike/"+this.id+"/);
 
-    });
+    });*/
 
     $('#search-twitter').click( function () {
         
