@@ -16,17 +16,17 @@ $(document).ready(function() {
         });
     });
 
-    /*$('#toolbar-like').click( function () {
+    $('#toolbar-like').click( function () {
        
-        $.get("/like/"+this.id+"/");
+        $.get("/like/"+$("#tb-stumble-frame").attr("src")+"/");
         
     });
 
     $('#toolbar-dislike').click( function () {
        
-        $.get("/dislike/"+this.id+"/);
+        $.get("/dislike/"+$("#tb-stumble-frame").attr("src")+"/");
 
-    });*/
+    });
 
     $('#search-twitter').click( function () {
         
