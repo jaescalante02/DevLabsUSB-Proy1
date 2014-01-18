@@ -21,19 +21,19 @@ $(document).ready(function() {
 
     $('#toolbar-like').click( function () {
        
-        $.get("/like/"+$("#tb-stumble-frame").attr("src")+"/");
+        $.get("/like/"+escape($("#tb-stumble-frame").attr("src"))+"/");
         
     });
 
     $('#toolbar-dislike').click( function () {
        
-        $.get("/dislike/"+$("#tb-stumble-frame").attr("src")+"/");
+        $.get("/dislike/"+escape($("#tb-stumble-frame").attr("src"))+"/");
 
     });
 
     $('#search-twitter').click( function () {
         
-        $.get("/search/"+$("#search").val()+"/", function(data) {
+        $.get("/search/"+escape($("#search").val())+"/", function(data) {
 
             $("#random-page").hide();
             numtw = data.length/2;
@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
 
     $('.tweet').click( function () {
-        $.get("/add/"+$("#"+this.id).attr("name")+"/", function(data) {
+        $.get("/add/"+escape($("#"+this.id).attr("name"))+"/", function(data) {
 
               $(".tweet").hide();
               $("#random-page").show();
