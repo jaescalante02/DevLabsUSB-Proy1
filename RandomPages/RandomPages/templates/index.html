@@ -1,7 +1,9 @@
 {%load staticfiles %}<!DOCTYPE html>
 <head>
     <title>The Chameleon Page</title>
-            <link rel='stylesheet' href='{{STATIC_URL}}css/style.css'>
+    <link rel='stylesheet' href='{{STATIC_URL}}css/style.css'>
+    <link rel="icon" type="image/png"
+     href="{{STATIC_URL}}img/chameleon.png" />
     <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.10.2.min.js">
     </script>
     <script type="text/javascript" src="{{STATIC_URL}}js/ajax.js">
@@ -13,35 +15,38 @@
     <img id="logo" src='{{STATIC_URL}}img/chameleon.png'/>
     <img id="name" src='{{STATIC_URL}}img/logo.png' />
     
-	<input type="text" id="search" value="holis">
+	<input type="text" id="search" value="What's new?">
     <input type="submit" value="Search in Twitter" id="search-twitter">
     <input type="submit" value="Discover" id="toolbar-discover"> 
     <input type="submit" value="Like" id="toolbar-like"> 
     <input type="submit" value="Dislike" id="toolbar-dislike"> 
 </div>
 
-<div id="tweet1" class="tweet" > hola1
+<div>
+    <table>
+        <tr>
+        <td id="tweet1" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet2" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet3" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet4" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet5" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet6" class="tweet" > hola1 </td>
+        </tr>
+        <tr>
+        <td id="tweet7" class="tweet" > hola1 </td>
+        </tr>
+    </table>
 </div>
-
-<div id="tweet2" class="tweet" > hola1
-</div>
-
-<div id="tweet3" class="tweet" > hola1
-</div>
-
-<div id="tweet4" class="tweet" > hola1
-</div>
-
-<div id="tweet5" class="tweet" > hola1
-</div>
-
-<div id="tweet6" class="tweet" > hola1
-</div>
-
-
-<div id="tweet7" class="tweet" > hola1
-</div>
-
 
 <div id="random-page">
     <iframe id="tb-stumble-frame" border="0" frameborder="0" hspace="0" 
