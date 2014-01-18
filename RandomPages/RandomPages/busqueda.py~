@@ -20,7 +20,7 @@ def buscarTweets(tema):
              tweets.append(url['expanded_url'])
              print url['expanded_url']
              i+=1
-        if (i>3):
+        if (i>6):
             break
 
     return tweets
