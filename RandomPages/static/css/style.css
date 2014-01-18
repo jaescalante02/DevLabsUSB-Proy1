@@ -56,3 +56,86 @@ display: none
 
 }
 
+#search-twitter {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 162px;
+   height: 18px;
+   background: url("http://dabuttonfactory.com/b.png?t=Search%20in%20Twitter&f=sans-serif-Bold&ts=16&tc=ffffff00&tshs=1&tshc=22222200&it=png&c=round&bgt=gradient&bgc=223388&ebgc=4477cc&hp=17&vp=3") no-repeat;
+   line-height: 18px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #ffffff;
+   font-family: sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   font-style: normal;
+   text-shadow: #222222 1px 1px 0;
+   border: none;
+}
+#search-twitter > span {
+   display: -moz-inline-block;
+}
+
+#toolbar-discover{
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 101px;
+   height: 18px;
+   background: url("http://dabuttonfactory.com/b.png?t=Discover&f=sans-serif-Bold&ts=16&tc=ffffff00&tshs=1&tshc=22222200&it=png&c=round&bgt=gradient&bgc=223388&ebgc=4477cc&hp=17&vp=3") no-repeat;
+   line-height: 18px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #ffffff;
+   font-family: sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   font-style: normal;
+   text-shadow: #222222 1px 1px 0;
+   border: none;
+}
+#toolbar-discover > span {
+   display: -moz-inline-block;
+}
+
+#toolbar-like {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 64px;
+   height: 18px;
+   background: url("http://dabuttonfactory.com/b.png?t=Like&f=sans-serif-Bold&ts=16&tc=ffffff00&tshs=1&tshc=22222200&it=png&c=round&bgt=unicolored&bgc=223388&hp=17&vp=3") no-repeat;
+   line-height: 18px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #ffffff;
+   font-family: sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   font-style: normal;
+   text-shadow: #222222 1px 1px 0;
+   border: none;
+}
+#toolbar-like > span {
+   display: -moz-inline-block;
+}
+
+#toolbar-dislike {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 83px;
+   height: 18px;
+   background: url("http://dabuttonfactory.com/b.png?t=Dislike&f=sans-serif-Bold&ts=16&tc=ffffff00&tshs=1&tshc=22222200&it=png&c=round&bgt=unicolored&bgc=872222&hp=17&vp=3") no-repeat;
+   line-height: 18px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #ffffff;
+   font-family: sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   font-style: normal;
+   text-shadow: #222222 1px 1px 0;
+   border: none;
+}
+#toolbar-dislike > span {
+   display: -moz-inline-block;
+}
