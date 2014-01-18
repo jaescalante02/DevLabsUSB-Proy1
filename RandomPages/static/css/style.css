@@ -9,6 +9,9 @@
     color: #ffffff;
     text-align: left;
 }
+#name{
+    padding-right: 20px;
+}
 #random-page {
     width: 100%;
     overflow: hidden;
