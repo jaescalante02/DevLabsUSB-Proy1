@@ -1,6 +1,6 @@
 body
 {
-    background: black top center no-repeat fixed;
+    background: white url('/../static/img/background.jpg') top center no-repeat fixed;
     font-family:Verdana, Geneva, sans-serif;
     margin:0px;
     padding:0px;
@@ -19,6 +19,23 @@ a:hover
 {
     color:#000000;
 }
+#devlabs{
+    float: left;
+    height: 100px;
+    width: 100px;
+    padding-left: 100px;
+}
+#chameleon{
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 10px; 
+    height:100px;
+    width:100px;
+}
+#name{
+    float: left;
+    padding-left: 30px;
+}
 .header
 {
     height:144px;
@@ -28,6 +45,7 @@ a:hover
     width:1028px;
     margin:auto;
     margin-top:30px;
+    text-align:center;
 }
 .header span
 {
@@ -92,7 +110,7 @@ a:hover
     padding-left:14px;
     padding-right:14px;
     padding-bottom:12px;
-    padding-top:5px;
+    padding-top:30px;
     color:#000000;
     margin:auto;
     background:url('/../static/img/fill.png') repeat-y center;
