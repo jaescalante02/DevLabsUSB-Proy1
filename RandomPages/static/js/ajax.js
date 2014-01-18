@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('#toolbar-title').click( function () {
         $.get("/test/"+this.id+"/", function(data) {
 
+ 
             $("#tb-stumble-frame").attr("src",data[0]);
 
         });
@@ -11,6 +12,8 @@ $(document).ready(function() {
     $('#toolbar-discover').click( function () {
         $.get("/discover/"+this.id+"/", function(data) {
 
+              $(".tweet").hide();
+              $("#random-page").show();
               $("#tb-stumble-frame").attr("src",data[0]);
 
         });
@@ -50,9 +53,9 @@ $(document).ready(function() {
     $('.tweet').click( function () {
         $.get("/add/"+$("#"+this.id).attr("name")+"/", function(data) {
 
-              $("#tb-stumble-frame").attr("src",data);
+              $(".tweet").hide();
               $("#random-page").show();
-
+              $("#tb-stumble-frame").attr("src",data);
             
 
         });
