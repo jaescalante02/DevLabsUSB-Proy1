@@ -121,7 +121,7 @@ def devuelve_tweets(request,search):
 def agregado(request, elem):
 
    if request.is_ajax():
-      print 'AJAX'
+      URL(elem,1).save()
       #fact = get_object_or_404(Fact, id=fact_id)
       #tweets = busqueda.buscarTweets(search)
       #message.append(tweets[1])#fact.type

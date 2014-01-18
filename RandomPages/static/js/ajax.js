@@ -19,6 +19,11 @@ $(document).ready(function() {
         });
     });
 
+    $('#text').click( function () {
+        $.get("/home/"+this.id+"/");
+    });
+
+
     $('#toolbar-like').click( function () {
        
         $.get("/like/"+escape($("#tb-stumble-frame").attr("src"))+"/");
