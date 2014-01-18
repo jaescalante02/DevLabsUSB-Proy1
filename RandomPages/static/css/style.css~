@@ -50,7 +50,7 @@ body{
     height: 35px;
 }
 
-.tweet{
+p .tweet{
 
 display: none
 

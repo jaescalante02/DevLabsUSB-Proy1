@@ -114,7 +114,6 @@ def devuelve_tweets(request,search):
    if request.is_ajax():
       print 'AJAX'
       #fact = get_object_or_404(Fact, id=fact_id)
-      pagina = obtenerPagAleatoria()
       tweets = busqueda.buscarTweets(search)
       #message.append(tweets[1])#fact.type
       #message.append('Es obvio que Marla es una perra!')
@@ -126,5 +125,23 @@ def devuelve_tweets(request,search):
    json = simplejson.dumps(tweets)
 
    return HttpResponse(json, mimetype='application/json')
+
+def agregado(request, elem):
+
+   if request.is_ajax():
+      print 'AJAX'
+      #fact = get_object_or_404(Fact, id=fact_id)
+      #tweets = busqueda.buscarTweets(search)
+      #message.append(tweets[1])#fact.type
+      #message.append('Es obvio que Marla es una perra!')
+
+   else:
+      message.append("You're the lying type, I can just tell.")
+   #print tweets[0]
+   #print tweets[1] 
+   json = simplejson.dumps(elem)
+
+   return HttpResponse(json, mimetype='application/json')
+
 
 
