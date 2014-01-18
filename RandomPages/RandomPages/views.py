@@ -32,7 +32,6 @@ def discover(request,arg2):
     message = []
     if request.is_ajax():
         pagina = obtenerPagAleatoria()
-        print pagina
         message.append(pagina)
     else:
         message.append("http://www.ldc.usb.ve")
@@ -50,11 +49,7 @@ def like(request,urlPagina):
        pag.puntuacion += 1
        pag.save()
 
-       return false
-   else:
-
-       return false
-
+   return HttpResponse("success")
 
 # Funcion para disminuir la puntuacion de una pagina
 def dislike(request,urlPagina):
@@ -66,10 +61,7 @@ def dislike(request,urlPagina):
            pag.puntuacion += -1
        pag.save()
 
-       return false
-   else:
-
-       return false
+   return HttpResponse("success")
 
 
 
